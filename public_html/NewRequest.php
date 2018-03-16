@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require "../resources/config.php";
 # create connection to database
 $mysqli = new mysqli($config['db']['amsti_01']['host']
@@ -11,7 +11,7 @@ if ($mysqli->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
-?>
+?> -->
 
 
 <!DOCTYPE html>
@@ -104,7 +104,7 @@ if ($mysqli->connect_errno) {
                                 <div class="col-md-6 pull-left">
                                     <label for="system" hidden>School</label>
 
-                                    <select id="school" name="school">
+                                    <select multiple id="school" name="school">
                                         <option value="">Select School</option>
                                         <?php
                                         $school_results = $mysqli->query("select school, system from systems_schools order by system, school") or die($mysqli->error);
