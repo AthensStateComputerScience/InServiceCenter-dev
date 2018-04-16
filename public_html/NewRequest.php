@@ -18,7 +18,7 @@ if ($mysqli->connect_errno) {
 <html class="no-js" lang="en" dir="ltr">
 
 <head>
-    <title>New Request</title>
+    <title>Request Form | AMSTI</title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,25 +56,17 @@ if ($mysqli->connect_errno) {
           <a href="GoverningBoard.html" class="nav-item nav-link">Board</a>
           <a href="Inservice.html" class="nav-item nav-link">Inservice</a>
           <a href="ProDevel.html" class="nav-item nav-link">Professional Development</a>
-          <a href="NewRequest.php" class="nav-item nav-link">Forms</a>
-          <a href="calendar.html" class="nav-item nav-link">Calendar</a>
-          <a href="ReservationRequest.html" class="nav-item nav-link active">Reservation
-            <span class="sr-only">(current)</span>
+          <a href="NewRequest.php" class="nav-item nav-link">Forms
+          <span class="sr-only">(current)</span>
           </a>
+          <a href="calendar.html" class="nav-item nav-link">Calendar</a>
+          <a href="ReservationRequest.html" class="nav-item nav-link active">Reservation</a>
         </div>
       </div>
     </nav>
   </div>
 
-<div class="callout large">
-    <div class="row column text-center">
-        <img id="logo" src="img/Logo.jpg" width="25%" height="25%" alt="" />
-    </div>
-</div>
-
-
 <form class="container">
-
     <div class="row setup-content" id="RequestForm" name="RequestForm">
         <div class="col-xs-12">
             <div class="col-md-12 well text-center">
@@ -85,7 +77,7 @@ if ($mysqli->connect_errno) {
                 <form class="container form-horizontal" name="innerRequestForm" id="innerRequestForm" novalidate>
 
                     <!-- Request Type Radio Buttons -->
-                    <div class="row form-group">
+                    <div class="container">
                         <div class="radio-inline">
                             <label><input type="radio" name="RequestType" id="General" value="General"
                                     onclick="selectRequestType();">General Request</label>
@@ -94,12 +86,6 @@ if ($mysqli->connect_errno) {
                             <label><input type="radio" name="RequestType" id="BookStudy" value="BookStudy"
                                     onclick="selectRequestType();">Book Study</label>
                         </div>
-                        <!--
-                        <div class="radio-inline">
-                            <label><input type="radio" name="RequestType" id="Workshop" value="Workshop"
-                                    onclick="javascript:selectRequestType();">Workshop</label>
-                        </div>
-                        -->
                     </div>
 
                     <!-- School and System Input -->
@@ -131,6 +117,7 @@ if ($mysqli->connect_errno) {
 
                                     <select multiple id="school" name="school">
                                         <option value="">Select School</option>
+                                        <option value="">DEMO</option>
                                         <?php
                                         $school_results = $mysqli->query("select school, system from systems_schools order by system, school") or die($mysqli->error);
                                         while ($row = mysqli_fetch_array($school_results)) {
@@ -392,13 +379,6 @@ if ($mysqli->connect_errno) {
                 <script>
                     $('#captcha').realperson({chars: $.realperson.alphanumeric, length: 5});
                 </script>
-                <!--<button id="submitForm" class="btn btn-primary btn-md" type="submit">Submit Form</button>-->
-
-
-    <!--                <div class="errorTxt">-->
-    <!--                    <span id="errNm2"></span>-->
-    <!--                    <span id="errNm1"></span>-->
-    <!--                </div>-->
             </div>
         </div>
     </div>

@@ -210,11 +210,16 @@
               </label>
             </div>
             <hr>
-            <div class="g-recaptcha" data-sitekey="6LfKuUkUAAAAAKq01-Oky8RalDcUS_oFBoeoQ_oj"></div>
-            <div class="btn-group" id="reserve">
-              <button type="button" id="form_submit" class="btn btn-primary btn-lg">Reserve</button>
-            </div>
+              <div class="captcha_container">
+                <input  type="text" id="captcha" name="captcha">
+              </div>
+              <div class="btn-group">
+                <button id="submitRequest" type="button" class="btn btn-primary">Submit Form</button>
+              </div>
           </form>
+              <script>
+                $('#captcha').realperson({chars: $.realperson.alphanumeric, length: 5});
+              </script>
         </div>
       </div>
     </div>
