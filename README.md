@@ -2,8 +2,10 @@
 
 ## Tasks and Goals
 
-- [X] Clean up Repo
-- [X] Clear up code for Homepage Styling
-- [ ] Gain Access to the Database
-- [ ] MultiSelect for Database
-- [ ] Update Faculty & Staff
+- [X] Clean up Repository
+- [X] Clear up styling
+- [X] Gain Access to the Database
+- [X] Multi-Select on Form for Database work around
+- [X] Google Calendar
+- [X] Google reCAPTCHA
+- [X] Update Faculty and Staff
